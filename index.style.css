@@ -1,0 +1,68 @@
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+
+        }
+
+        .magic-card {
+            margin-top: 300px;
+            border: solid;
+            height: 200px;
+            width: 300px;
+            background-color: rgba(245, 236, 236, 0.979);
+            border-radius: 1rem;
+            animation: movement 2s ease-out,
+                slide 10s alternate infinite ease-in-out 2s
+        }
+        @keyframes movement {
+            0% {
+                opacity: 0.1;
+                transform: scale(0, 0);
+
+            }
+
+        }
+
+        @keyframes slide {
+
+            from {
+                transform: translateX(-15vw);
+            }
+
+            to {
+                transform: translateX(15vw); 
+
+             }
+        }
+
+        .magic-card:hover {
+         animation: circle1 2s linear ;
+        
+        }
+
+            @keyframes circle1 {
+
+                0% {
+                         background-color:blue;
+                    transform: rotate(0deg);
+                }
+                100%{
+                        background-color: brown;
+                    transform: rotate(360deg);
+                
+                }
+            }
+
+        
